@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # Lets create streamlit webapp for revenue prediction and able to filter
 import streamlit as st
 import pandas as pd
@@ -20,11 +20,6 @@ st.write('This app is created to predict the revenue of Arerna Media based on th
 
 # Load the model
 model = joblib.load('model.pkl')
-
-# Create a filter for Publication, Type, Method
-Publication = st.selectbox('Publication', ['ST', 'BL', 'FM', 'BD', 'All'])
-Type = st.selectbox('Type', ['Corporate', 'Individual', 'All'])
-Method = st.selectbox('Method', ['Digital', 'Print', 'All'])
 
 # Load the data
 data = pd.read_csv('forecast.csv')
@@ -169,7 +164,7 @@ if 'Revenue' in data.columns and 'Subscribers' in data.columns and 'ARPU' in dat
         st.write("The model is loading soon...")
         
 else:
-=======
+
 # Lets create streamlit webapp for revenue prediction and able to filter
 import streamlit as st
 import pandas as pd
@@ -340,5 +335,5 @@ if 'Revenue' in data.columns and 'Subscribers' in data.columns and 'ARPU' in dat
         st.write("The model is loading soon...")
         
 else:
->>>>>>> b8d5702ccda8aa2c9c009ba40a57fe77b7b628ee
+
     st.write('The necessary columns for prediction are not present in the data.')
